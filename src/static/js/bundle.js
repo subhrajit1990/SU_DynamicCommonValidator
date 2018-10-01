@@ -358,7 +358,19 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var reac
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return FirstScreen; });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\n\nclass FirstScreen extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {\n\tconstructor() {\n\t\tsuper();\n\t}\n\n\trender() {\n\t\treturn react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\n\t\t\t\"div\",\n\t\t\t{ className: \"new\" },\n\t\t\t\"New\"\n\t\t);\n\t}\n}\n\n//# sourceURL=webpack:///./src/components/FirstScreen.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return FirstScreen; });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _utils_CommonValidator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/CommonValidator */ \"./src/utils/CommonValidator.js\");\n\n\n\nclass FirstScreen extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {\n\tconstructor(props) {\n\t\tsuper(props);\n\t\tthis.submit = this.submit.bind(this);\n\t}\n\n\tsubmit(e) {\n\t\tif (e) e.preventDefault();\n\t\tconst formData = {};\n\n\t\tvar tempObj = this.refs;\n\t\tObject(_utils_CommonValidator__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(tempObj);\n\n\t\t// Object.keys(textmpObj).map((a,b)=> {\n\t\t// \tconsole.log(a);\n\t\t// \t//formData[a] = this.refs[a].value;\n\t\t// })\n\n\t\tconsole.log('FORM DATA ', formData);\n\t}\n\n\trender() {\n\t\treturn react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\n\t\t\t'form',\n\t\t\t{ onSubmit: this.submit },\n\t\t\treact__WEBPACK_IMPORTED_MODULE_0___default.a.createElement('input', { ref: 'phone', className: 'phone', type: 'phone', name: 'phone' }),\n\t\t\treact__WEBPACK_IMPORTED_MODULE_0___default.a.createElement('input', { ref: 'email', className: 'email', type: 'email', name: 'email' }),\n\t\t\treact__WEBPACK_IMPORTED_MODULE_0___default.a.createElement('input', { ref: 'text', className: 'name', type: 'text', name: 'firstName' }),\n\t\t\treact__WEBPACK_IMPORTED_MODULE_0___default.a.createElement('input', { type: 'submit', value: 'Submit' })\n\t\t);\n\t}\n}\n\n//# sourceURL=webpack:///./src/components/FirstScreen.js?");
+
+/***/ }),
+
+/***/ "./src/utils/CommonValidator.js":
+/*!**************************************!*\
+  !*** ./src/utils/CommonValidator.js ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return CommonValidator; });\nfunction CommonValidator(pObj = {}) {\n   debugger;\n\n   Object.keys(pObj).map(key => {\n      console.log(key + \"->\" + pObj[key].value);\n   });\n\n   console.log(\"Cmmon functions \" + pObj);\n}\n\n//# sourceURL=webpack:///./src/utils/CommonValidator.js?");
 
 /***/ })
 
